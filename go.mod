@@ -3,7 +3,6 @@ module github.com/temnosvit/go-twitch
 go 1.23.6
 
 require (
-	github.com/adeithe/go-twitch v0.3.1
 	github.com/gorilla/websocket v1.5.3
 	github.com/stretchr/testify v1.10.0
 )

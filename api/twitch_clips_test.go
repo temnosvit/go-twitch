@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/adeithe/go-twitch/api"
 	"github.com/stretchr/testify/assert"
+	"github.com/temnosvit/go-twitch/api"
 )
 
 func TestAPI_ClipsDuration(t *testing.T) {

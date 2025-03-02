@@ -1,5 +1,3 @@
-github.com/adeithe/go-twitch v0.3.1 h1:vGvnS3zq8fYl1sCK0I5dUozlb24eHUp1j2zZXxaBchU=
-github.com/adeithe/go-twitch v0.3.1/go.mod h1:hjUvA7PIUsv2oqi34mExy/clwQz026bjotsqXQOFVJY=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=

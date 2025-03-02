@@ -8,8 +8,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/adeithe/go-twitch"
-	"github.com/adeithe/go-twitch/pubsub"
+	"github.com/temnosvit/go-twitch"
+	"github.com/temnosvit/go-twitch/pubsub"
 )
 
 var mgr *pubsub.Client

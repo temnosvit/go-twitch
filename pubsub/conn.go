@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/adeithe/go-twitch/pubsub/nonce"
 	"github.com/gorilla/websocket"
+	"github.com/temnosvit/go-twitch/pubsub/nonce"
 )
 
 // Conn stores data about a PubSub connection
