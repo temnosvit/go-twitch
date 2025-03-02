@@ -166,3 +166,29 @@ func (c *ClearChatRequest) Do(ctx context.Context, opts ...RequestOption) error 
 	_, err = decodeResponse[any](res)
 	return err
 }
+
+type ShoutOutRequest struct {
+	resource        *ModerationResource
+	broadcasterId   string
+	toBroadcasterId string
+	moderatorId     string
+}
+
+func (r *ModerationResource) ShoutOut(broadcasterId, toBroadcasterId, moderatorId string) *ShoutOutRequest {
+	return &ShoutOutRequest{r, broadcasterId, toBroadcasterId, moderatorId}
+}
+
+func (c *ShoutOutRequest) Do(ctx context.Context, opts ...RequestOption) error {
+	query := url.Values{}
+	query.Set("broadcaster_id", c.broadcasterId)
+	query.Set("broadcaster_id", c.toBroadcasterId)
+	query.Set("moderator_id", c.moderatorId)
+
+	res, err := c.resource.client.doRequest(ctx, http.MethodPost, fmt.Sprintf("/chat/shoutouts?%s", query.Encode()), nil, opts...)
+	if err != nil {
+		return err
+	}
+	defer res.Body.Close()
+	_, err = decodeResponse[any](res)
+	return err
+}
