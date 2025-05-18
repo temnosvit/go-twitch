@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type SearchChannel struct {
+type SearchChannelResource struct {
 	UserID          string    `json:"id"`
 	UserLogin       string    `json:"broadcaster_login"`
 	UserDisplayName string    `json:"display_name"`
@@ -25,7 +25,7 @@ type SearchChannelsResource struct {
 	client *Client
 }
 
-func NewSearchResource(client *Client) *SearchChannelsResource {
+func NewSearchChannelResource(client *Client) *SearchChannelsResource {
 	return &SearchChannelsResource{client}
 }
 
@@ -36,7 +36,7 @@ type SearchChannelsListCall struct {
 
 type SearchChannelsListResponse struct {
 	Header http.Header
-	Data   []SearchChannel
+	Data   []SearchChannelResource
 	Cursor string
 }
 
@@ -87,7 +87,7 @@ func (c *SearchChannelsListCall) Do(ctx context.Context, opts ...RequestOption) 
 	}
 	defer res.Body.Close()
 
-	data, err := decodeResponse[SearchChannel](res)
+	data, err := decodeResponse[SearchChannelResource](res)
 	if err != nil {
 		return nil, err
 	}
